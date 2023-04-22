@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <title>thenewboston</title>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet", type="text/css", href="{{ url_for('static', filename='tbl_style_plus.css') }}">
+</head>
+<body>
+    <div class="container">
+        <div class="table-responsive">
+        <table class="table table-hover table-striped">
+            <thead class="table-dark">
+                <tr>
+                    <th scope="col"></th>
+                    <th scope="col">نوع الحركة</th>
+                    <th scope="col">تاريخ الحركة</th>
+                    <th scope="col">قيمة الحركة (دينار)</th>
+                    <th scope="col">الرصيد (دينار)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="accordion-toggle collapsed"
+                    id="accordion1"
+                    data-mdb-toggle="collapse"
+                    data-mdb-parent="#accordion1"
+                    href="#collapseOne"
+                    aria-controls="collapseOne">
+
+                    <td class="expand-button">
+                        <img src= "static/inv.png ", width="20", height="20">
+                    </td>
+                    <td>فاتورة مبيعات</td>
+                    <td>12-03-2023</td>
+                    <td>8,600</td>
+                    <td>28,000</td>
+                </tr>
+                <tr class="hide-table-padding">
+                    <td></td>
+                    <td colspan="3">
+                        <div id="collapseOne" class="collapse in p-3">
+                            <div class="row">
+                                <div class="col-2">label</div>
+                                <div class="col-6">value 1</div>
+                            </div>
+                            <div class="row">
+                                <div class="col-2">label</div>
+                                <div class="col-6">value 2</div>
+                            </div>
+                            <div class="row">
+                              <div class="col-2">label</div>
+                              <div class="col-6">value 3</div>
+                            </div>
+                            <div class="row">
+                              <div class="col-2">label</div>
+                              <div class="col-6">value 4</div>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+<!--
+                <tr class="accordion-toggle collapsed"
+                    id="accordion2"
+                    data-mdb-toggle="collapse"
+                    data-mdb-parent="#accordion2"
+                    href="#collapseTwo"
+                    aria-controls="collapseTwo">
+
+                    <td class="expand-button">
+                        <img src= "static/inv.png ", width="20", height="20">
+                    </td>
+                    <td>فاتورة مبيعات</td>
+                    <td>17-03-2023</td>
+                    <td>10,000</td>
+                    <td>38,000</td>
+                </tr>
+                <tr class="hide-table-padding">
+                  <td></td>
+                  <td colspan="4">
+                    <div id="collapseTwo" class="collapse in p-3">
+                      <div class="row">
+                        <div class="col-2">label</div>
+                        <div class="col-6">value</div>
+                      </div>
+                      <div class="row">
+                        <div class="col-2">label</div>
+                        <div class="col-6">value</div>
+                      </div>
+                      <div class="row">
+                        <div class="col-2">label</div>
+                        <div class="col-6">value</div>
+                      </div>
+                      <div class="row">
+                        <div class="col-2">label</div>
+                        <div class="col-6">value</div>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+
+                <tr class="accordion-toggle collapsed"
+                    id="accordion3"
+                    data-mdb-toggle="collapse"
+                    data-mdb-parent="#accordion2"
+                    href="#collapseTwo"
+                    aria-controls="collapseTwo">
+
+                    <td class="expand-button">
+                        <img src= "static/rtrn.png ", width="20", height="20">
+                    </td>
+                    <td>مرتجع مبيعات</td>
+                    <td>20-03-2023</td>
+                    <td>1,000</td>
+                    <td>37,000</td>
+                </tr>
+                <tr class="accordion-toggle collapsed"
+                    id="accordion4"
+                    data-mdb-toggle="collapse"
+                    data-mdb-parent="#accordion2"
+                    href="#collapseTwo"
+                    aria-controls="collapseTwo">
+                    <td class="expand-button">
+                        <img src= "static/inv.png ", width="20", height="20">
+                    </td>
+                    <td class="text-center">فاتورة مبيعات</td>
+                    <td>25-03-2023</td>
+                    <td>7,500</td>
+                    <td>34,500</td>
+                </tr>
+                <tr class="accordion-toggle collapsed"
+                    id="accordion5"
+                    data-mdb-toggle="collapse"
+                    data-mdb-parent="#accordion2"
+                    href="#collapseTwo"
+                    aria-controls="collapseTwo">
+                    <td class="expand-button">
+                        <img src= "static/dis.png ", width="20", height="20">
+                    </td>
+                    <td class="text-center">تحفيض</td>
+                    <td>02-04-2023</td>
+                    <td>500</td>
+                    <td>34,000</td>
+                </tr>
+                <tr class="accordion-toggle collapsed"
+                    id="accordion6"
+                    data-mdb-toggle="collapse"
+                    data-mdb-parent="#accordion2"
+                    href="#collapseTwo"
+                    aria-controls="collapseTwo">
+                    <td class="expand-button">
+                        <img src= "static/pay2.png ", width="20", height="20">
+                    </td>
+                    <td class="text-center">دفع</td>
+                    <td>07-04-2023</td>
+                    <td>20,000</td>
+                    <td>14,000</td>
+                </tr>
+-->
+            </tbody>
+        </table>
+        </div>
+    </div>
+</body>
+</html>
